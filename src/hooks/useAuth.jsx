@@ -8,13 +8,13 @@ import {
 } from 'firebase/auth';
 import { doc, getDoc, deleteDoc, setDoc } from 'firebase/firestore';
 
-import { auth } from 'db/config';
-import { db } from 'db/config';
+import { db,auth } from '../db/config';
 
 import { useAuthContext } from './useAuthContext';
 import { useCartContext } from './useCartContext';
+import { handleError } from '../helpers/error/handleError';
 
-import { handleError } from 'helpers/error/handleError';
+
 
 export const useAuth = () => {
   const { user, dispatch: dispatchAuthAction } = useAuthContext();

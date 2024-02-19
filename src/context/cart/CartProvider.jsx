@@ -2,9 +2,10 @@ import { useReducer, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { doc, getDoc, collection, setDoc, deleteDoc } from 'firebase/firestore';
-import { db } from 'db/config';
+import { db } from '../../db/config';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
-import { useAuthContext } from 'hooks/useAuthContext';
+
 import { useToast } from 'hooks/useToast';
 
 import CartContext from './cart-context';

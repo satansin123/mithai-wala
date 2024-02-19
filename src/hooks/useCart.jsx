@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { doc, getDoc, setDoc, deleteDoc, collection } from 'firebase/firestore';
 
-import { db } from 'db/config';
+import { db } from '../db/config';
 
 import { useAuthContext } from './useAuthContext';
 import { useCartContext } from './useCartContext';
